@@ -1,0 +1,6 @@
+{
+  "name": "VapoFil - US Men's Vitality Sales Funnel & CRO Engine",
+  "description": "High-converting direct-response sales page and sales analyst CRO optimization engine for VapoFil premium male vitality supplement targeting the US market.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
