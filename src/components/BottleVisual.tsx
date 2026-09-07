@@ -16,26 +16,29 @@ export const BottleVisual: React.FC<BottleVisualProps> = ({
   className = '',
   showBadges = true,
 }) => {
-  // Determine real image source based on count or hero context (with ?v=2 for instant cache refresh)
-  let imageSrc = '/images/1-bottle.webp?v=2';
+  // Determine filename based on count or size
+  let fileName = '1-bottle';
   let altText = 'VapoFil™ Premium Formula 60 Capsules';
 
-  if (size === 'hero') {
-    imageSrc = '/images/6-bottles.webp?v=2';
-    altText = 'VapoFil™ 7-in-1 Male Optimization Formula';
-  } else if (count === 6) {
-    imageSrc = '/images/6-bottles.webp?v=2';
-    altText = 'VapoFil™ 6-Bottle 180-Day Supply';
+  if (size === 'hero' || count === 6) {
+    fileName = '6-bottles';
+    altText = size === 'hero' ? 'VapoFil™ 7-in-1 Male Optimization Formula' : 'VapoFil™ 6-Bottle 180-Day Supply';
   } else if (count === 3) {
-    imageSrc = '/images/3-bottles.webp?v=2';
+    fileName = '3-bottles';
     altText = 'VapoFil™ 3-Bottle 90-Day Supply';
   } else if (count === 2) {
-    imageSrc = '/images/2-bottles.webp?v=2';
+    fileName = '2-bottles';
     altText = 'VapoFil™ 2-Bottle 60-Day Supply';
   } else {
-    imageSrc = '/images/1-bottle.webp?v=2';
+    fileName = '1-bottle';
     altText = 'VapoFil™ 1-Bottle 30-Day Supply';
   }
+
+  // Base-aware relative path suitable for GitHub Pages, root domains, and local preview
+  const metaEnv = (import.meta as unknown as { env?: { BASE_URL?: string } })?.env;
+  const basePath = metaEnv?.BASE_URL || './';
+  const prefix = basePath.endsWith('/') ? basePath : `${basePath}/`;
+  const primarySrc = `${prefix}images/${fileName}.webp`;
 
   // Sizing classes
   const sizeClasses = {
@@ -44,6 +47,23 @@ export const BottleVisual: React.FC<BottleVisualProps> = ({
     lg: 'h-64 sm:h-72 max-w-[280px]',
     hero: 'h-80 sm:h-96 md:h-[420px] max-w-[340px] sm:max-w-[380px]',
   }[size];
+
+  // Robust fallback sequence if host environment has path quirks
+  const handleImageError = (e: React.SyntheticEvent<HTMLImageElement, Event>) => {
+    const target = e.currentTarget;
+    const currentSrc = target.getAttribute('src') || '';
+    
+    if (!currentSrc.includes('.png')) {
+      // Fallback 1: try transparent PNG
+      target.src = `${prefix}images/${fileName}.png`;
+    } else if (currentSrc.startsWith('http') || currentSrc.startsWith('/')) {
+      // Fallback 2: try pure relative ./
+      target.src = `./images/${fileName}.png`;
+    } else if (!currentSrc.includes('.jpg')) {
+      // Fallback 3: try jpg
+      target.src = `./images/${fileName}.jpg`;
+    }
+  };
 
   return (
     <div
@@ -59,8 +79,9 @@ export const BottleVisual: React.FC<BottleVisualProps> = ({
       >
         <img
           id={`bottle-img-${count}-${size}`}
-          src={imageSrc}
+          src={primarySrc}
           alt={altText}
+          onError={handleImageError}
           className="w-full h-full object-contain drop-shadow-xl"
           loading={size === 'hero' ? 'eager' : 'lazy'}
           decoding="async"
