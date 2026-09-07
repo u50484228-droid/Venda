@@ -9,18 +9,18 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ language }) => {
   return (
-    <footer className="bg-slate-50 text-slate-500 text-xs border-t border-slate-200 py-10 pb-24 sm:pb-12">
+    <footer className="bg-slate-100 text-slate-600 text-xs border-t border-slate-200 py-10 pb-24 sm:pb-12">
       <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
         
         {/* Brand */}
         <div className="flex items-center justify-center gap-1.5">
-          <div className="w-1.5 h-5 bg-blue-600 rounded-xs" />
-          <span className="text-lg font-black text-slate-900 tracking-tight">VAPOFIL</span>
+          <div className="w-1.5 h-5 bg-gradient-to-b from-blue-600 to-blue-800 rounded-xs" />
+          <span className="text-lg font-black text-slate-950 tracking-tight">VAPOFIL</span>
         </div>
 
         {/* FDA Disclaimer Box */}
-        <div className="p-4 rounded-xl bg-slate-100/80 border border-slate-200/80 text-[11px] text-slate-500 leading-relaxed max-w-3xl mx-auto">
-          <p className="font-semibold text-slate-700 mb-1">
+        <div className="p-4 rounded-xl bg-white border border-slate-200 text-[11px] text-slate-600 leading-relaxed max-w-3xl mx-auto shadow-xs">
+          <p className="font-semibold text-slate-800 mb-1">
             *FDA DISCLAIMER / AVISO REGULATÓRIO:
           </p>
           <p>
@@ -32,12 +32,12 @@ export const Footer: React.FC<FooterProps> = ({ language }) => {
 
         {/* Essential Legal Links & Copyright */}
         <div className="space-y-3 pt-2">
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] text-slate-500">
-            <span className="hover:text-slate-800 cursor-pointer">Privacy Policy</span>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-[11px] text-slate-600">
+            <span className="hover:text-blue-600 cursor-pointer transition-colors">Privacy Policy</span>
             <span>•</span>
-            <span className="hover:text-slate-800 cursor-pointer">Terms of Service</span>
+            <span className="hover:text-blue-600 cursor-pointer transition-colors">Terms of Service</span>
             <span>•</span>
-            <span className="hover:text-slate-800 cursor-pointer">Refund Policy</span>
+            <span className="hover:text-blue-600 cursor-pointer transition-colors">Refund Policy</span>
           </div>
 
           <p className="text-[11px] text-slate-400">

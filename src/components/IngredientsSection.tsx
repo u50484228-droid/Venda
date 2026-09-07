@@ -33,7 +33,7 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5 text-blue-600" />
             <span>
               {language === 'en' ? 'Inside Every Capsule of VapoFil™' : 'Dentro de Cada Cápsula de VapoFil™'}
@@ -51,7 +51,9 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
             ) : (
               <>
                 Os 7 Ingredientes Premium Que Devolvem o{' '}
-                <span className="text-blue-600">Vigor e a Potência</span>
+                <span className="text-blue-600">
+                  Vigor e a Potência
+                </span>
               </>
             )}
           </h2>
@@ -71,7 +73,7 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
           <button
             type="button"
             onClick={onOpenLabelModal}
-            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-slate-50 border border-blue-300 text-blue-700 text-xs font-bold shadow-xs transition-all cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 text-xs font-bold shadow-xs transition-all cursor-pointer"
           >
             <ZoomIn className="w-4 h-4 text-blue-600" />
             <span>{language === 'en' ? 'Verify Official Supplement Facts Box' : 'Ver Tabela Nutricional Completa'}</span>
@@ -86,23 +88,26 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
               onClick={() => setSelectedIngredient(ingredient)}
               className={`p-5 rounded-2xl border transition-all cursor-pointer relative overflow-hidden flex flex-col justify-between group ${
                 selectedIngredient.id === ingredient.id
-                  ? 'bg-white border-blue-500 shadow-xl shadow-blue-500/10 ring-2 ring-blue-500'
-                  : 'bg-white hover:bg-slate-50/80 border-slate-200 hover:border-blue-300 shadow-xs'
+                  ? 'bg-blue-50/40 border-blue-500 shadow-xl ring-2 ring-blue-500/20'
+                  : 'bg-white hover:bg-slate-50/70 border-slate-200 hover:border-blue-400 shadow-xs'
               }`}
             >
               {/* Botanical image header */}
-              <div className="relative h-40 w-full rounded-xl overflow-hidden mb-4 bg-slate-100">
+              <div className="relative h-40 w-full rounded-xl overflow-hidden mb-4 bg-slate-900">
                 <img
                   src={ingredient.imageUrl}
                   alt={ingredient.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80';
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent" />
                 
                 {/* Dosage Pill */}
-                <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md bg-white/95 border border-slate-200 text-blue-900 text-[11px] font-extrabold shadow-sm">
+                <div className="absolute top-2.5 right-2.5 px-2.5 py-1 rounded-md bg-slate-950/90 border border-blue-500/40 text-blue-300 text-[11px] font-extrabold shadow-sm">
                   {ingredient.dosage}
                 </div>
 
@@ -117,7 +122,7 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
 
               {/* Text description */}
               <div className="space-y-2 flex-1">
-                <h3 className="text-base font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-base font-bold text-slate-950 group-hover:text-blue-600 transition-colors">
                   {language === 'en' ? ingredient.name : ingredient.namePt}
                 </h3>
                 
@@ -143,7 +148,7 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
           ))}
 
           {/* 8th Card: The Synergistic Catalyst Message */}
-          <div className="p-6 rounded-2xl bg-gradient-to-b from-blue-900 to-indigo-950 text-white border border-blue-600 flex flex-col justify-between text-center relative overflow-hidden shadow-lg">
+          <div className="p-6 rounded-2xl bg-gradient-to-b from-[#0b336e] via-[#082654] to-[#051a3d] text-white border border-blue-500/70 flex flex-col justify-between text-center relative overflow-hidden shadow-xl">
             <div className="space-y-3 my-auto">
               <div className="w-12 h-12 rounded-full bg-blue-500/30 border border-blue-400 flex items-center justify-center mx-auto text-blue-200">
                 <Sparkles className="w-6 h-6" />
@@ -167,7 +172,7 @@ export const IngredientsSection: React.FC<IngredientsSectionProps> = ({
             <button
               type="button"
               onClick={onOpenLabelModal}
-              className="w-full mt-4 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs uppercase tracking-wider transition-colors cursor-pointer shadow-md"
+              className="w-full mt-4 py-2.5 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-xs uppercase tracking-wider transition-all cursor-pointer shadow-md"
             >
               {language === 'en' ? 'Inspect Clinical Doses' : 'Ver Dosagens Oficiais'}
             </button>

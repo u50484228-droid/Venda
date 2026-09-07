@@ -16,12 +16,12 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50/40 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
+    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50/25 text-slate-900 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
       
       {/* Ambient background glow effects */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-400/10 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/5 blur-[140px] rounded-full pointer-events-none -z-10" />
       <div className="absolute top-10 left-10 w-72 h-72 bg-amber-400/10 blur-[90px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-300/15 blur-[100px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-400/5 blur-[110px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -36,7 +36,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               {language === 'en' ? (
                 <>
                   The #1 Natural Formula To Unleash Male{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700">
+                  <span className="text-blue-600">
                     Virility, Stamina
                   </span>{' '}
                   & Morning Vitality.
@@ -44,7 +44,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               ) : (
                 <>
                   A fórmula natural número um do mundo para promover a{' '}
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-blue-600 to-indigo-700">
+                  <span className="text-blue-600">
                     virilidade, a energia
                   </span>{' '}
                   e a vitalidade masculina.
@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               <button
                 type="button"
                 onClick={scrollToPricing}
-                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 hover:from-amber-300 hover:to-amber-400 text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/25 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3 cursor-pointer group"
+                className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3 cursor-pointer group"
               >
                 <span>{language === 'en' ? 'Claim Your Discount Up To $780 Off' : 'Garantir Meu Desconto Exclusivo'}</span>
                 <ArrowRight className="w-5 h-5 text-slate-950 group-hover:translate-x-1 transition-transform" />
@@ -149,23 +149,23 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <div className="flex items-center gap-1.5">
                   <img src="./images/badge-gmp.png" alt="GMP Certified" className="w-10 h-10 object-contain" />
-                  <span className="text-[11px] font-bold text-slate-700">GMP</span>
+                  <span className="text-[11px] font-bold text-slate-800">GMP</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <img src="./images/badge-fda.png" alt="FDA Facility" className="w-10 h-10 object-contain" />
-                  <span className="text-[11px] font-bold text-slate-700">FDA Facility</span>
+                  <span className="text-[11px] font-bold text-slate-800">FDA Facility</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <img src="./images/badge-natural.png" alt="100% Natural" className="w-10 h-10 object-contain" />
-                  <span className="text-[11px] font-bold text-slate-700">100% Natural</span>
+                  <span className="text-[11px] font-bold text-slate-800">100% Natural</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <img src="./images/badge-usa.png" alt="Made in USA" className="w-10 h-10 object-contain" />
-                  <span className="text-[11px] font-bold text-slate-700">Made in USA</span>
+                  <span className="text-[11px] font-bold text-slate-800">Made in USA</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <img src="./images/badge-gmo.png" alt="Non-GMO" className="w-10 h-10 object-contain" />
-                  <span className="text-[11px] font-bold text-slate-700">Non-GMO</span>
+                  <span className="text-[11px] font-bold text-slate-800">Non-GMO</span>
                 </div>
               </div>
             </div>
@@ -174,7 +174,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
 
           {/* Right Column: High-Impact Bottle Display (1st on mobile, 5 cols on desktop) */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex flex-col items-center justify-center">
-            <div className="relative w-full max-w-md p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-blue-50/80 via-white to-blue-50/40 border border-blue-200 shadow-xl">
+            <div className="relative w-full max-w-md p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-blue-50/60 via-slate-50 to-white border border-blue-100 shadow-xl">
               
               {/* Product Badge Tag */}
               <div className="absolute top-4 right-4 z-20">
@@ -187,7 +187,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               {/* Vector Bottle Presentation */}
               <BottleVisual
                 size="hero"
-                count={1}
+                count={6}
                 onOpenLabelModal={onOpenLabelModal}
               />
 
@@ -195,11 +195,11 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               <div className="mt-6 pt-4 border-t border-slate-200 grid grid-cols-3 gap-2 text-center">
                 <div className="p-2 bg-white rounded-xl border border-slate-200 shadow-2xs">
                   <p className="text-xs text-slate-500 uppercase font-bold">Count</p>
-                  <p className="text-sm font-extrabold text-slate-900">60 Capsules</p>
+                  <p className="text-sm font-extrabold text-slate-950">60 Capsules</p>
                 </div>
                 <div className="p-2 bg-white rounded-xl border border-slate-200 shadow-2xs">
                   <p className="text-xs text-slate-500 uppercase font-bold">Dose</p>
-                  <p className="text-sm font-extrabold text-slate-900">2 Daily</p>
+                  <p className="text-sm font-extrabold text-slate-950">2 Daily</p>
                 </div>
                 <div className="p-2 bg-white rounded-xl border border-slate-200 shadow-2xs">
                   <p className="text-xs text-slate-500 uppercase font-bold">Origin</p>

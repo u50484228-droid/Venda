@@ -17,7 +17,7 @@ export interface Ingredient {
 }
 
 export interface PricingTier {
-  id: '1-bottle' | '6-bottles' | '3-bottles';
+  id: '2-bottles' | '6-bottles' | '3-bottles' | '1-bottle';
   bottles: number;
   supplyDays: number;
   title: string;

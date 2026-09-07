@@ -15,12 +15,12 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ language }) => {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 border-b border-slate-200">
+    <section id="faq" className="py-16 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <HelpCircle className="w-3.5 h-3.5 text-blue-600" />
             <span>{language === 'en' ? 'Frequently Asked Questions' : 'Perguntas Frequentes'}</span>
           </div>
@@ -48,14 +48,14 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ language }) => {
                 <button
                   type="button"
                   onClick={() => toggleItem(idx)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/60 transition-colors"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-slate-50/70 transition-colors"
                 >
-                  <span className="font-bold text-base sm:text-lg text-slate-900">
+                  <span className="font-bold text-base sm:text-lg text-slate-950">
                     {language === 'en' ? item.question : item.questionPt}
                   </span>
                   <ChevronDown
                     className={`w-5 h-5 text-blue-600 shrink-0 transition-transform duration-200 ${
-                      isOpen ? 'rotate-180 text-amber-600' : ''
+                      isOpen ? 'rotate-180 text-blue-700' : ''
                     }`}
                   />
                 </button>

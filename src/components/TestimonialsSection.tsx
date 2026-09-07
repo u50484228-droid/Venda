@@ -14,7 +14,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
             <span>{language === 'en' ? 'Real American Men. Real Verified Results.' : 'Homens Reais. Resultados Comprovados.'}</span>
           </div>
@@ -34,9 +34,9 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
           </h2>
 
           <div className="flex items-center justify-center gap-2 pt-2">
-            <div className="flex text-amber-500">
+            <div className="flex text-amber-400">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-amber-400" />
+                <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
               ))}
             </div>
             <span className="text-sm font-bold text-slate-900">4.92 / 5.0 Global Rating</span>
@@ -49,14 +49,14 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
           {TESTIMONIALS.map((test) => (
             <div
               key={test.id}
-              className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:bg-white hover:shadow-lg transition-all flex flex-col justify-between space-y-4 relative"
+              className="p-6 sm:p-8 rounded-2xl bg-slate-50/70 border border-slate-200 hover:border-blue-400 hover:bg-white hover:shadow-lg transition-all flex flex-col justify-between space-y-4 relative"
             >
               <div className="space-y-3">
                 {/* Star rating & verified badge */}
                 <div className="flex items-center justify-between">
-                  <div className="flex text-amber-500">
+                  <div className="flex text-amber-400">
                     {Array.from({ length: test.rating }).map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-400" />
+                      <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
                   <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
@@ -66,7 +66,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
                 </div>
 
                 {/* Headline quote */}
-                <h3 className="text-base font-bold text-slate-900 leading-snug">
+                <h3 className="text-base font-bold text-slate-950 leading-snug">
                   {language === 'en' ? test.headline : test.headlinePt}
                 </h3>
 
@@ -79,7 +79,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
               {/* Customer Footer Metadata */}
               <div className="pt-4 border-t border-slate-200 flex items-center justify-between text-xs">
                 <div>
-                  <p className="font-bold text-slate-900">{test.name}, {test.age}</p>
+                  <p className="font-bold text-slate-950">{test.name}, {test.age}</p>
                   <p className="text-slate-500 text-[11px]">{test.location}</p>
                 </div>
                 <div className="text-right">

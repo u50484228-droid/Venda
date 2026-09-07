@@ -74,18 +74,18 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
   const averageOrderValue = totalOrders > 0 ? (projectedRevenue / totalOrders).toFixed(2) : '0.00';
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/85 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-5xl bg-slate-900 border-2 border-amber-500/60 rounded-3xl shadow-2xl overflow-hidden my-auto animate-in zoom-in-95 duration-200 flex flex-col max-h-[92vh]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-5xl bg-white border border-slate-200 rounded-3xl shadow-2xl overflow-hidden my-auto animate-in zoom-in-95 duration-200 flex flex-col max-h-[92vh]">
         
         {/* Header */}
-        <div className="px-6 py-4 bg-slate-950 border-b border-slate-800 flex items-center justify-between shrink-0">
+        <div className="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center text-slate-950 font-black shadow-md">
               <BarChart3 className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-lg font-black text-white tracking-wide">
+                <h2 className="text-lg font-black text-slate-950 tracking-wide">
                   {language === 'en'
                     ? 'Senior Sales & CRO Analyst Workstation'
                     : 'Painel Estratégico do Analista de Vendas & CRO'}
@@ -94,7 +94,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
                   US Men Market
                 </span>
               </div>
-              <p className="text-xs text-slate-400">
+              <p className="text-xs text-slate-500">
                 {language === 'en'
                   ? 'High-conversion funnel architecture, buyer psychology, checkout setup & ad swipes'
                   : 'Estratégia de copy, psicologia masculina nos EUA, links de checkout e maximização de AOV'}
@@ -105,21 +105,21 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
           <button
             type="button"
             onClick={onClose}
-            className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition-colors cursor-pointer"
+            className="p-2 rounded-xl text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
         {/* Navigation Tabs */}
-        <div className="px-6 py-2.5 bg-slate-950/70 border-b border-slate-800 flex flex-wrap gap-2 shrink-0">
+        <div className="px-6 py-2.5 bg-slate-50 border-b border-slate-200 flex flex-wrap gap-2 shrink-0">
           <button
             type="button"
             onClick={() => setActiveTab('strategy')}
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'strategy'
                 ? 'bg-amber-500 text-slate-950 shadow-md'
-                : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
             }`}
           >
             <Lightbulb className="w-3.5 h-3.5" />
@@ -132,7 +132,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'audience'
                 ? 'bg-amber-500 text-slate-950 shadow-md'
-                : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
             }`}
           >
             <Target className="w-3.5 h-3.5" />
@@ -145,7 +145,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'checkout-links'
                 ? 'bg-amber-500 text-slate-950 shadow-md'
-                : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
             }`}
           >
             <LinkIcon className="w-3.5 h-3.5" />
@@ -158,7 +158,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'ad-swipes'
                 ? 'bg-amber-500 text-slate-950 shadow-md'
-                : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
             }`}
           >
             <FileText className="w-3.5 h-3.5" />
@@ -171,7 +171,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
             className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all flex items-center gap-1.5 cursor-pointer ${
               activeTab === 'calculator'
                 ? 'bg-amber-500 text-slate-950 shadow-md'
-                : 'bg-slate-800/80 text-slate-300 hover:bg-slate-800'
+                : 'bg-white text-slate-700 border border-slate-200 hover:bg-slate-100'
             }`}
           >
             <TrendingUp className="w-3.5 h-3.5" />
@@ -180,7 +180,7 @@ export const SalesAnalystModal: React.FC<SalesAnalystModalProps> = ({
         </div>
 
         {/* Tab Content Container (scrollable) */}
-        <div className="p-6 overflow-y-auto space-y-6 flex-1 text-slate-200 text-sm">
+        <div className="p-6 overflow-y-auto space-y-6 flex-1 text-slate-800 text-sm">
           
           {/* TAB 1: FUNNEL ARCHITECTURE & COPY */}
           {activeTab === 'strategy' && (

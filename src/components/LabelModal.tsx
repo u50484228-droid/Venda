@@ -12,24 +12,24 @@ export const LabelModal: React.FC<LabelModalProps> = ({ isOpen, onClose, languag
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md overflow-y-auto">
-      <div className="relative w-full max-w-4xl bg-slate-900 border border-blue-500/40 rounded-2xl shadow-2xl overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-900/60 backdrop-blur-md overflow-y-auto">
+      <div className="relative w-full max-w-4xl bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden my-auto animate-in fade-in zoom-in-95 duration-200">
         
         {/* Header Bar */}
-        <div className="flex items-center justify-between px-6 py-4 bg-slate-950 border-b border-slate-800">
+        <div className="flex items-center justify-between px-6 py-4 bg-slate-50 border-b border-slate-200">
           <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-blue-500" />
-            <h2 className="text-lg font-bold text-white tracking-wide">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-600" />
+            <h2 className="text-lg font-bold text-slate-950 tracking-wide">
               {language === 'en' ? 'Official VapoFil™ Product Label & Supplement Facts' : 'Rótulo Oficial do Produto e Tabela Nutricional VapoFil™'}
             </h2>
-            <span className="px-2 py-0.5 rounded text-[11px] bg-blue-900/60 text-blue-300 font-mono border border-blue-700/50">
+            <span className="px-2 py-0.5 rounded text-[11px] bg-blue-50 text-blue-700 font-mono border border-blue-200">
               REV 10/24
             </span>
           </div>
           <button
             type="button"
             onClick={onClose}
-            className="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+            className="p-1.5 rounded-lg text-slate-500 hover:text-slate-800 hover:bg-slate-200/60 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -186,35 +186,35 @@ export const LabelModal: React.FC<LabelModalProps> = ({ isOpen, onClose, languag
 
           {/* Quality Seals confirmation */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/60 text-center">
-              <CheckCircle2 className="w-5 h-5 text-emerald-400 mx-auto mb-1" />
-              <p className="text-xs font-bold text-white">100% Pure Guaranteed</p>
-              <p className="text-[10px] text-slate-400">Zero synthetic fillers</p>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
+              <p className="text-xs font-bold text-slate-900">100% Pure Guaranteed</p>
+              <p className="text-[10px] text-slate-500">Zero synthetic fillers</p>
             </div>
-            <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/60 text-center">
-              <CheckCircle2 className="w-5 h-5 text-blue-400 mx-auto mb-1" />
-              <p className="text-xs font-bold text-white">Doctor Formulated</p>
-              <p className="text-[10px] text-slate-400">Clinical botanical ratios</p>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+              <CheckCircle2 className="w-5 h-5 text-blue-600 mx-auto mb-1" />
+              <p className="text-xs font-bold text-slate-900">Doctor Formulated</p>
+              <p className="text-[10px] text-slate-500">Clinical botanical ratios</p>
             </div>
-            <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/60 text-center">
-              <CheckCircle2 className="w-5 h-5 text-emerald-400 mx-auto mb-1" />
-              <p className="text-xs font-bold text-white">GMP Certified</p>
-              <p className="text-[10px] text-slate-400">Good Manufacturing Practice</p>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600 mx-auto mb-1" />
+              <p className="text-xs font-bold text-slate-900">GMP Certified</p>
+              <p className="text-[10px] text-slate-500">Good Manufacturing Practice</p>
             </div>
-            <div className="p-3 bg-slate-800/60 rounded-xl border border-slate-700/60 text-center">
-              <CheckCircle2 className="w-5 h-5 text-amber-400 mx-auto mb-1" />
-              <p className="text-xs font-bold text-white">Made in USA</p>
-              <p className="text-[10px] text-slate-400">FDA registered facility</p>
+            <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
+              <CheckCircle2 className="w-5 h-5 text-amber-600 mx-auto mb-1" />
+              <p className="text-xs font-bold text-slate-900">Made in USA</p>
+              <p className="text-[10px] text-slate-500">FDA registered facility</p>
             </div>
           </div>
         </div>
 
         {/* Footer Close button */}
-        <div className="px-6 py-4 bg-slate-950 border-t border-slate-800 flex justify-end">
+        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex justify-end">
           <button
             type="button"
             onClick={onClose}
-            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-semibold text-sm transition-colors cursor-pointer"
+            className="px-5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-sm transition-colors cursor-pointer"
           >
             {language === 'en' ? 'Close Supplement Facts' : 'Fechar Informações Nutricionais'}
           </button>

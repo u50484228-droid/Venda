@@ -8,7 +8,7 @@ interface ProblemAgitationProps {
 
 export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) => {
   return (
-    <section id="science" className="py-16 sm:py-24 bg-white text-slate-900 border-b border-slate-200 relative">
+    <section id="science" className="py-16 sm:py-24 bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 border-b border-slate-200 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -57,11 +57,11 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           
           {/* Trap 1: SHBG Binding */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-blue-100 border border-blue-200 flex items-center justify-center text-blue-700">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-blue-400 hover:shadow-lg transition-all space-y-4 relative group">
+            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700">
               <Unlock className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">
+            <h3 className="text-xl font-bold text-slate-950">
               {language === 'en' ? '1. The "SHBG Hormone Trap"' : '1. A Armadilha da SHBG'}
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -81,11 +81,11 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
           </div>
 
           {/* Trap 2: Microvascular Endothelial Decline */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-sky-100 border border-sky-200 flex items-center justify-center text-sky-700">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-sky-400 hover:shadow-lg transition-all space-y-4 relative group">
+            <div className="w-12 h-12 rounded-xl bg-sky-50 border border-sky-200 flex items-center justify-center text-sky-700">
               <Activity className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">
+            <h3 className="text-xl font-bold text-slate-950">
               {language === 'en' ? '2. Depleted Nitric Oxide Flow' : '2. Redução do Óxido Nítrico'}
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -105,11 +105,11 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
           </div>
 
           {/* Trap 3: DHT Conversion & Prostate Stress */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all space-y-4 relative group">
-            <div className="w-12 h-12 rounded-xl bg-purple-100 border border-purple-200 flex items-center justify-center text-purple-700">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-purple-400 hover:shadow-lg transition-all space-y-4 relative group">
+            <div className="w-12 h-12 rounded-xl bg-purple-50 border border-purple-200 flex items-center justify-center text-purple-700">
               <ShieldAlert className="w-6 h-6" />
             </div>
-            <h3 className="text-xl font-bold text-slate-900">
+            <h3 className="text-xl font-bold text-slate-950">
               {language === 'en' ? '3. Toxic DHT Prostate Cascade' : '3. Conversão Tóxica em DHT'}
             </h3>
             <p className="text-sm text-slate-600 leading-relaxed">
@@ -131,7 +131,7 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
         </div>
 
         {/* Comparison Box: Dangerous Synthetics vs VapoFil */}
-        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 shadow-lg">
+        <div className="mt-14 p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200 shadow-md">
           <h3 className="text-lg sm:text-2xl font-black text-slate-950 text-center mb-6">
             {language === 'en'
               ? 'Why American Men Are Ditching Dangerous Prescription Chemicals For VapoFil™'
@@ -141,7 +141,7 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             
             {/* The Dangerous Old Way */}
-            <div className="p-5 rounded-xl bg-red-50 border border-red-200 space-y-3">
+            <div className="p-5 rounded-xl bg-red-50/60 border border-red-200 space-y-3">
               <div className="flex items-center gap-2 text-red-700 font-bold text-sm uppercase">
                 <AlertTriangle className="w-4 h-4 text-red-600" />
                 <span>{language === 'en' ? 'Chemical "Blue" Pills & Synthetic Drugs' : 'Pílulas Azuis Sintéticas & Farmacêuticas'}</span>
@@ -163,7 +163,7 @@ export const ProblemAgitation: React.FC<ProblemAgitationProps> = ({ language }) 
             </div>
 
             {/* The VapoFil Botanical Protocol */}
-            <div className="p-5 rounded-xl bg-emerald-50 border border-emerald-200 space-y-3">
+            <div className="p-5 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-3">
               <div className="flex items-center gap-2 text-emerald-800 font-bold text-sm uppercase">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600" />
                 <span>{language === 'en' ? 'The VapoFil™ 100% Natural Protocol' : 'O Protocolo Natural VapoFil™'}</span>

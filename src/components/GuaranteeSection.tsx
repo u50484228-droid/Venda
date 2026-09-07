@@ -12,8 +12,8 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
     <section className="py-16 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* White / Cobalt Highlighted Guarantee Container matching Image 4 & 5 */}
-        <div className="bg-gradient-to-b from-white via-slate-50 to-white text-slate-900 rounded-3xl p-6 sm:p-12 shadow-2xl border-4 border-blue-600 relative overflow-hidden text-center space-y-6">
+        {/* Navy Highlighted Guarantee Container */}
+        <div className="bg-white text-slate-900 rounded-3xl p-6 sm:p-12 shadow-xl border-2 border-blue-600/30 relative overflow-hidden text-center space-y-6">
           
           {/* Top 60-Day Official Guarantee Seal from vapofil.com */}
           <div className="flex justify-center">
@@ -21,7 +21,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
               <img
                 src="./images/guarantee.webp"
                 alt="60-Day Money Back Guarantee"
-                className="w-full h-full object-contain drop-shadow-xl"
+                className="w-full h-full object-contain drop-shadow-md"
                 loading="lazy"
               />
             </div>
@@ -32,7 +32,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
               {language === 'en' ? 'Full Support & 100% Dedicated Guidance' : 'Acompanhamento e suporte completos.'}
             </p>
             
-            <h2 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight underline decoration-blue-500 decoration-4">
+            <h2 className="text-2xl sm:text-4xl font-black text-slate-950 tracking-tight">
               {language === 'en' ? (
                 <>60-Day Satisfaction Guarantee – We Believe in Our Product</>
               ) : (
@@ -42,7 +42,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
           </div>
 
           {/* Guarantee copy translated from Image 4 & 5 */}
-          <div className="max-w-2xl mx-auto space-y-4 text-sm sm:text-base text-slate-700 leading-relaxed font-normal">
+          <div className="max-w-2xl mx-auto space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
             <p>
               {language === 'en' ? (
                 <>
@@ -55,7 +55,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
               )}
             </p>
 
-            <p className="text-xs sm:text-sm text-slate-600 italic">
+            <p className="text-xs sm:text-sm text-slate-500 italic">
               {language === 'en' ? (
                 <>
                   "Even if you return empty bottles, we will issue a full, prompt refund. That is our unwavering confidence in VapoFil’s formulation. Order your kit today completely risk-free!"
@@ -73,32 +73,32 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
             
             {/* 1. GMP Practice */}
             <div className="flex flex-col items-center">
-              <img src="./images/badge-gmp.png" alt="GMP Certified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
-              <span className="text-[11px] font-bold text-slate-800 mt-1.5">GMP Certified</span>
+              <img src="./images/badge-gmp.png" alt="GMP Certified" className="w-16 h-16 object-contain drop-shadow-xs" loading="lazy" />
+              <span className="text-[11px] font-bold text-slate-700 mt-1.5">GMP Certified</span>
             </div>
 
             {/* 2. FDA Registered Facility */}
             <div className="flex flex-col items-center">
-              <img src="./images/badge-fda.png" alt="FDA Inspected Facility" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
-              <span className="text-[11px] font-bold text-slate-800 mt-1.5">FDA Inspected</span>
+              <img src="./images/badge-fda.png" alt="FDA Inspected Facility" className="w-16 h-16 object-contain drop-shadow-xs" loading="lazy" />
+              <span className="text-[11px] font-bold text-slate-700 mt-1.5">FDA Inspected</span>
             </div>
 
             {/* 3. 100% Natural Ingredients */}
             <div className="flex flex-col items-center">
-              <img src="./images/badge-natural.png" alt="100% Natural" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
-              <span className="text-[11px] font-bold text-slate-800 mt-1.5">100% Natural</span>
+              <img src="./images/badge-natural.png" alt="100% Natural" className="w-16 h-16 object-contain drop-shadow-xs" loading="lazy" />
+              <span className="text-[11px] font-bold text-slate-700 mt-1.5">100% Natural</span>
             </div>
 
             {/* 4. Made in USA */}
             <div className="flex flex-col items-center">
-              <img src="./images/badge-usa.png" alt="Made in USA" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
-              <span className="text-[11px] font-bold text-slate-800 mt-1.5">Made in USA</span>
+              <img src="./images/badge-usa.png" alt="Made in USA" className="w-16 h-16 object-contain drop-shadow-xs" loading="lazy" />
+              <span className="text-[11px] font-bold text-slate-700 mt-1.5">Made in USA</span>
             </div>
 
             {/* 5. Non-GMO Free */}
             <div className="flex flex-col items-center col-span-2 sm:col-span-1">
-              <img src="./images/badge-gmo.png" alt="Non-GMO Verified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
-              <span className="text-[11px] font-bold text-slate-800 mt-1.5">Non-GMO Verified</span>
+              <img src="./images/badge-gmo.png" alt="Non-GMO Verified" className="w-16 h-16 object-contain drop-shadow-xs" loading="lazy" />
+              <span className="text-[11px] font-bold text-slate-700 mt-1.5">Non-GMO Verified</span>
             </div>
 
           </div>
