@@ -151,7 +151,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
 
                 {/* Credit card badges */}
                 <div className="flex items-center justify-center pt-1">
-                  <img src="/images/payment-cards.webp" alt="Cards Accepted" className="h-5 object-contain opacity-90" />
+                  <img src="./images/payment-cards.webp" alt="Cards Accepted" className="h-5 object-contain opacity-90" />
                 </div>
               </div>
 
@@ -218,11 +218,6 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                   <Truck className="w-3.5 h-3.5" />
                   <span>{language === 'en' ? '+ FREE FAST USA SHIPPING' : '+ FRETE GRÁTIS PARA OS EUA'}</span>
                 </div>
-
-                {/* 2 Free Bonuses Included */}
-                <div className="mt-2 text-[11px] font-bold text-blue-900 bg-blue-50 py-1 rounded border border-blue-200">
-                  🎁 {language === 'en' ? 'INCLUDES 2 FREE DIGITAL BONUSES ($116 VALUE)' : 'INCLUI 2 BÔNUS DIGITAIS EXCLUSIVOS'}
-                </div>
               </div>
 
               {/* Guarantees & CTA */}
@@ -244,7 +239,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
 
                 {/* Credit card badges */}
                 <div className="flex items-center justify-center pt-1">
-                  <img src="/images/payment-cards.webp" alt="Cards Accepted" className="h-6 object-contain opacity-95" />
+                  <img src="./images/payment-cards.webp" alt="Cards Accepted" className="h-6 object-contain opacity-95" />
                 </div>
               </div>
 
@@ -319,7 +314,7 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
 
                 {/* Credit card badges */}
                 <div className="flex items-center justify-center pt-1">
-                  <img src="/images/payment-cards.webp" alt="Cards Accepted" className="h-5 object-contain opacity-90" />
+                  <img src="./images/payment-cards.webp" alt="Cards Accepted" className="h-5 object-contain opacity-90" />
                 </div>
               </div>
 

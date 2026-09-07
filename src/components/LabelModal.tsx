@@ -80,8 +80,6 @@ export const LabelModal: React.FC<LabelModalProps> = ({ isOpen, onClose, languag
               <div className="pt-2 border-t border-slate-800/80 text-[10px] text-slate-400 space-y-0.5">
                 <p className="text-white font-semibold">DISTRIBUTED FOR: {PRODUCT_INFO.manufacturer}</p>
                 <p>{PRODUCT_INFO.facilityAddress}</p>
-                <p className="text-blue-400">{PRODUCT_INFO.supportPhone}</p>
-                <p className="text-blue-400">{PRODUCT_INFO.supportEmail}</p>
                 <div className="pt-1.5 flex items-center gap-1 text-[9px] text-slate-300">
                   <span className="text-xs">🇺🇸</span>
                   <span>Made in the USA with globally sourced ingredients</span>

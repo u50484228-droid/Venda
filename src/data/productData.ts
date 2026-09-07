@@ -282,8 +282,8 @@ export const FAQ_ITEMS: FaqItem[] = [
     category: 'guarantee',
     question: 'How does the 60-Day "Empty Bottle" Money-Back Guarantee work?',
     questionPt: 'Como funciona a Garantia de Satisfação de 60 Dias?',
-    answer: 'We stand behind VapoFil with absolute confidence. Try it for a full 60 days. If you are not thoroughly blown away by your renewed stamina, morning vigor, and bedroom vitality, simply contact our Florida support team at contact@customercs.com or call +1 323-372-9581. Send back the bottles (even if they are completely empty), and we will refund 100% of your purchase price minus shipping. Zero hassle, zero risk.',
-    answerPt: 'Você tem 60 dias inteiros para testar sem risco. Se não ficar totalmente maravilhado com sua nova energia, vigor e virilidade, basta enviar um e-mail para contact@customercs.com ou ligar para nosso suporte. Devolvemos 100% do valor pago, mesmo que você envie os frascos vazios.',
+    answer: 'We stand behind VapoFil with absolute confidence. Try it for a full 60 days. If you are not thoroughly blown away by your renewed stamina, morning vigor, and bedroom vitality, simply send back the bottles (even if they are completely empty), and we will refund 100% of your purchase price minus shipping. Zero hassle, zero risk.',
+    answerPt: 'Você tem 60 dias inteiros para testar sem risco. Se não ficar totalmente maravilhado com sua nova energia, vigor e virilidade, basta solicitar o reembolso. Devolvemos 100% do valor pago, mesmo que você envie os frascos vazios.',
   },
   {
     id: 'faq-6',

@@ -100,7 +100,7 @@ export const DoctorEndorsement: React.FC<DoctorEndorsementProps> = ({ language, 
                 {/* Real Doctor Image from vapofil.com holding VapoFil */}
                 <div className="relative h-72 sm:h-80 w-full rounded-xl overflow-hidden mb-4 bg-slate-900 flex items-center justify-center">
                   <img
-                    src="/images/doctor.webp"
+                    src="./images/doctor.webp"
                     alt="Dr. Emma Clark evaluating VapoFil"
                     className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
                     loading="lazy"

@@ -47,11 +47,9 @@ export const BottleVisual: React.FC<BottleVisualProps> = ({
       {/* Subtle Blue Glow Backdrop */}
       <div className="absolute inset-0 bg-blue-500/15 blur-2xl rounded-full scale-110 -z-10 pointer-events-none" />
 
-      {/* Real Product Render with hover zoom */}
+      {/* Real Product Render with hover zoom and energetic jumping animation */}
       <div
-        onClick={onOpenLabelModal}
-        className={`relative flex items-center justify-center cursor-pointer group transition-transform duration-300 hover:scale-105 active:scale-95 ${sizeClasses}`}
-        title="Click to view Supplement Facts"
+        className={`relative flex items-center justify-center group transition-transform duration-300 hover:scale-105 animate-product-jump ${sizeClasses}`}
       >
         <img
           src={imageSrc}
@@ -60,29 +58,10 @@ export const BottleVisual: React.FC<BottleVisualProps> = ({
           loading={size === 'hero' ? 'eager' : 'lazy'}
           decoding="async"
         />
-
-        {/* Hover Inspect Overlay Indicator */}
-        {onOpenLabelModal && (
-          <div className="absolute inset-0 bg-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl flex items-center justify-center pointer-events-none">
-            <span className="px-3 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-bold flex items-center gap-1.5 shadow-lg border border-blue-400/50">
-              <ZoomIn className="w-3.5 h-3.5 text-blue-400" />
-              <span>Ver Rótulo</span>
-            </span>
-          </div>
-        )}
       </div>
 
-      {/* Click to inspect label interactive button */}
-      {showBadges && onOpenLabelModal && (
-        <button
-          type="button"
-          onClick={onOpenLabelModal}
-          className="mt-3 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-slate-50 text-blue-700 hover:text-blue-800 border border-blue-200 text-xs font-bold shadow-xs transition-all group cursor-pointer"
-        >
-          <ZoomIn className="w-3.5 h-3.5 text-blue-600 group-hover:scale-110 transition-transform" />
-          <span>Ver Tabela Nutricional & Rótulo</span>
-        </button>
-      )}
+      {/* Dynamic Floor Shadow beneath jumping bottle */}
+      <div className="w-36 sm:w-48 h-3.5 -mt-2 bg-blue-950/20 blur-md rounded-full animate-product-shadow pointer-events-none" />
     </div>
   );
 };

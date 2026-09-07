@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { ProblemAgitation } from './components/ProblemAgitation';
 import { IngredientsSection } from './components/IngredientsSection';
 import { DoctorEndorsement } from './components/DoctorEndorsement';
 import { PricingSection } from './components/PricingSection';
-import { BonusesSection } from './components/BonusesSection';
 import { GuaranteeSection } from './components/GuaranteeSection';
 import { TestimonialsSection } from './components/TestimonialsSection';
 import { FaqSection } from './components/FaqSection';
@@ -68,15 +66,6 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-amber-400 selection:text-slate-950 antialiased">
-      
-      {/* 1. Header with Scarcity Timer & Language Toggle */}
-      <Header
-        language={language}
-        onToggleLanguage={() => setLanguage(language === 'en' ? 'pt' : 'en')}
-        minutes={minutes}
-        seconds={seconds}
-      />
-
       <main>
         {/* 2. Direct-Response Hero Above The Fold */}
         <Hero
@@ -111,10 +100,7 @@ export default function App() {
           onSelectTier={handleSelectTier}
         />
 
-        {/* 7. Free Digital Bonuses ($116 Value with 6-Bottle Pack) */}
-        <BonusesSection language={language} />
-
-        {/* 8. 60-Day Ironclad Guarantee & Official Badges (Matching Images 4 & 5) */}
+        {/* 7. 60-Day Ironclad Guarantee & Official Badges (Matching Images 4 & 5) */}
         <GuaranteeSection language={language} />
 
         {/* 9. Verified Customer Social Proof & Testimonials */}

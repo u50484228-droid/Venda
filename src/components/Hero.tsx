@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, CheckCircle, ArrowRight, Star, Award, Sparkles, HeartPulse, Lock } from 'lucide-react';
+import { ShieldCheck, CheckCircle, ArrowRight, Award, HeartPulse, Sparkles } from 'lucide-react';
 import { BottleVisual } from './BottleVisual';
 import { Language } from '../types';
 
@@ -25,49 +25,14 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Trust Micro-Ticker */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 mb-6 text-xs sm:text-sm text-slate-600">
-          <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-slate-200 shadow-xs">
-            <div className="flex text-amber-500">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-amber-400" />
-              ))}
-            </div>
-            <span className="font-bold text-slate-900">4.9/5 Rating</span>
-            <span className="text-slate-500">
-              {language === 'en' ? '(14,200+ Men in USA)' : '(14.200+ Homens nos EUA)'}
-            </span>
-          </div>
-
-          <div className="flex items-center gap-1 text-emerald-600 font-semibold">
-            <CheckCircle className="w-4 h-4" />
-            <span>{language === 'en' ? 'In Stock & Ships Within 24h' : 'Em Estoque & Envio em 24h'}</span>
-          </div>
-
-          <div className="flex items-center gap-1 text-blue-700 font-semibold">
-            <Lock className="w-3.5 h-3.5" />
-            <span>{language === 'en' ? 'Discreet Plain Packaging' : 'Embalagem 100% Discreta'}</span>
-          </div>
-        </div>
-
-        {/* Two-Column Hero Grid */}
+        {/* Two-Column Hero Grid (Product first on mobile, side-by-side on desktop) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          {/* Left Column: Direct Response Copy & CTA (7 cols) */}
-          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
-            
-            {/* Direct Response Hook Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold uppercase tracking-wider shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              <span>
-                {language === 'en'
-                  ? '7-In-1 Botanical Male Optimization Complex'
-                  : 'Fórmula Natural Nº 1 para Virilidade & Energia'}
-              </span>
-            </div>
+          {/* Left Column: Direct Response Copy & CTA (7 cols on desktop, 2nd on mobile) */}
+          <div className="order-2 lg:order-1 lg:col-span-7 text-center lg:text-left space-y-6">
 
-            {/* High-Converting Main Headline (Translates Image 1 with American Direct Response Power) */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-slate-950 tracking-tight leading-[1.15] font-mono">
+            {/* High-Converting Main Headline */}
+            <h1 className="text-3xl sm:text-5xl lg:text-5xl xl:text-6xl font-black text-slate-950 tracking-tight leading-[1.15]">
               {language === 'en' ? (
                 <>
                   The #1 Natural Formula To Unleash Male{' '}
@@ -183,23 +148,23 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
               </p>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <div className="flex items-center gap-1.5">
-                  <img src="/images/badge-gmp.png" alt="GMP Certified" className="w-10 h-10 object-contain" />
+                  <img src="./images/badge-gmp.png" alt="GMP Certified" className="w-10 h-10 object-contain" />
                   <span className="text-[11px] font-bold text-slate-700">GMP</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <img src="/images/badge-fda.png" alt="FDA Facility" className="w-10 h-10 object-contain" />
+                  <img src="./images/badge-fda.png" alt="FDA Facility" className="w-10 h-10 object-contain" />
                   <span className="text-[11px] font-bold text-slate-700">FDA Facility</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <img src="/images/badge-natural.png" alt="100% Natural" className="w-10 h-10 object-contain" />
+                  <img src="./images/badge-natural.png" alt="100% Natural" className="w-10 h-10 object-contain" />
                   <span className="text-[11px] font-bold text-slate-700">100% Natural</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <img src="/images/badge-usa.png" alt="Made in USA" className="w-10 h-10 object-contain" />
+                  <img src="./images/badge-usa.png" alt="Made in USA" className="w-10 h-10 object-contain" />
                   <span className="text-[11px] font-bold text-slate-700">Made in USA</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <img src="/images/badge-gmo.png" alt="Non-GMO" className="w-10 h-10 object-contain" />
+                  <img src="./images/badge-gmo.png" alt="Non-GMO" className="w-10 h-10 object-contain" />
                   <span className="text-[11px] font-bold text-slate-700">Non-GMO</span>
                 </div>
               </div>
@@ -207,8 +172,8 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
 
           </div>
 
-          {/* Right Column: High-Impact Bottle Display (5 cols) */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center">
+          {/* Right Column: High-Impact Bottle Display (1st on mobile, 5 cols on desktop) */}
+          <div className="order-1 lg:order-2 lg:col-span-5 flex flex-col items-center justify-center">
             <div className="relative w-full max-w-md p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-blue-50/80 via-white to-blue-50/40 border border-blue-200 shadow-xl">
               
               {/* Product Badge Tag */}

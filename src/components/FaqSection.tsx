@@ -70,19 +70,6 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ language }) => {
           })}
         </div>
 
-        {/* Quick Help Box */}
-        <div className="mt-12 p-6 rounded-2xl bg-blue-50/70 border border-blue-200 text-center space-y-2">
-          <p className="text-sm font-semibold text-slate-900">
-            {language === 'en' ? 'Have a question not answered here?' : 'Tem alguma dúvida que não esteja aqui?'}
-          </p>
-          <p className="text-xs text-slate-600">
-            {language === 'en'
-              ? 'Our US customer care team is available Monday through Friday 9 AM – 6 PM EST.'
-              : 'Nossa equipe de suporte está pronta para te atender.'}
-          </p>
-          <p className="text-xs font-bold text-blue-700">contact@customercs.com • +1 323-372-9581</p>
-        </div>
-
       </div>
     </section>
   );

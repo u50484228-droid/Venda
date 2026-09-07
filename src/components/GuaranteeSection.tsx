@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Mail, Phone, CheckCircle2, RotateCcw, Award } from 'lucide-react';
+import { ShieldCheck, CheckCircle2, RotateCcw, Award } from 'lucide-react';
 import { PRODUCT_INFO } from '../data/productData';
 import { Language } from '../types';
 
@@ -19,7 +19,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
           <div className="flex justify-center">
             <div className="w-24 sm:w-28 h-24 sm:h-28 relative flex items-center justify-center">
               <img
-                src="/images/guarantee.webp"
+                src="./images/guarantee.webp"
                 alt="60-Day Money Back Guarantee"
                 className="w-full h-full object-contain drop-shadow-xl"
                 loading="lazy"
@@ -46,11 +46,11 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
             <p>
               {language === 'en' ? (
                 <>
-                  Our dietary supplements are backed by an ironclad <strong className="text-slate-900 font-bold">60-day 100% money-back guarantee</strong> from your purchase date. If you aren't completely thrilled with your physical energy, morning vigor, and overall bedroom vitality, simply contact our friendly US support team at <a href={`mailto:${PRODUCT_INFO.supportEmail}`} className="text-blue-600 font-bold underline">{PRODUCT_INFO.supportEmail}</a>.
+                  Our dietary supplements are backed by an ironclad <strong className="text-slate-900 font-bold">60-day 100% money-back guarantee</strong> from your purchase date. If you aren't completely thrilled with your physical energy, morning vigor, and overall bedroom vitality, simply return the bottles for a prompt, full 100% refund.
                 </>
               ) : (
                 <>
-                  Nossos suplementos têm garantia de reembolso de 60 dias a partir da data da compra. Se, após pelo menos 30 dias de uso, você não estiver completamente satisfeito com os resultados, o produto ou sua experiência geral, basta entrar em contato conosco pelo e-mail <a href={`mailto:${PRODUCT_INFO.supportEmail}`} className="text-blue-600 font-bold underline">{PRODUCT_INFO.supportEmail}</a>.
+                  Nossos suplementos têm garantia incondicional de reembolso de 60 dias a partir da data da compra. Se você não estiver completamente satisfeito com os resultados, basta solicitar o reembolso integral de 100% do seu investimento.
                 </>
               )}
             </p>
@@ -73,46 +73,34 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
             
             {/* 1. GMP Practice */}
             <div className="flex flex-col items-center">
-              <img src="/images/badge-gmp.png" alt="GMP Certified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
+              <img src="./images/badge-gmp.png" alt="GMP Certified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
               <span className="text-[11px] font-bold text-slate-800 mt-1.5">GMP Certified</span>
             </div>
 
             {/* 2. FDA Registered Facility */}
             <div className="flex flex-col items-center">
-              <img src="/images/badge-fda.png" alt="FDA Inspected Facility" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
+              <img src="./images/badge-fda.png" alt="FDA Inspected Facility" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
               <span className="text-[11px] font-bold text-slate-800 mt-1.5">FDA Inspected</span>
             </div>
 
             {/* 3. 100% Natural Ingredients */}
             <div className="flex flex-col items-center">
-              <img src="/images/badge-natural.png" alt="100% Natural" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
+              <img src="./images/badge-natural.png" alt="100% Natural" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
               <span className="text-[11px] font-bold text-slate-800 mt-1.5">100% Natural</span>
             </div>
 
             {/* 4. Made in USA */}
             <div className="flex flex-col items-center">
-              <img src="/images/badge-usa.png" alt="Made in USA" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
+              <img src="./images/badge-usa.png" alt="Made in USA" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
               <span className="text-[11px] font-bold text-slate-800 mt-1.5">Made in USA</span>
             </div>
 
             {/* 5. Non-GMO Free */}
             <div className="flex flex-col items-center col-span-2 sm:col-span-1">
-              <img src="/images/badge-gmo.png" alt="Non-GMO Verified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
+              <img src="./images/badge-gmo.png" alt="Non-GMO Verified" className="w-16 h-16 object-contain drop-shadow-sm" loading="lazy" />
               <span className="text-[11px] font-bold text-slate-800 mt-1.5">Non-GMO Verified</span>
             </div>
 
-          </div>
-
-          {/* Contact Support Hotline */}
-          <div className="pt-2 text-xs text-slate-600 flex flex-wrap items-center justify-center gap-6">
-            <span className="flex items-center gap-1.5 font-medium">
-              <Mail className="w-4 h-4 text-blue-600" />
-              {PRODUCT_INFO.supportEmail}
-            </span>
-            <span className="flex items-center gap-1.5 font-medium">
-              <Phone className="w-4 h-4 text-blue-600" />
-              {PRODUCT_INFO.supportPhone}
-            </span>
           </div>
 
         </div>
