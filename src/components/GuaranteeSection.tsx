@@ -1,6 +1,6 @@
 import React from 'react';
-import { ShieldCheck, CheckCircle2, RotateCcw, Award } from 'lucide-react';
-import { PRODUCT_INFO } from '../data/productData';
+import { ShieldCheck, CheckCircle2, RotateCcw, Award, ArrowRight } from 'lucide-react';
+import { PRODUCT_INFO, AFFILIATE_BUY_LINK } from '../data/productData';
 import { Language } from '../types';
 
 interface GuaranteeSectionProps {
@@ -101,6 +101,24 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
               <span className="text-[11px] font-bold text-slate-700 mt-1.5">Non-GMO Verified</span>
             </div>
 
+          </div>
+
+          {/* Guarantee CTA Button */}
+          <div className="pt-4 flex justify-center">
+            <a
+              id="guarantee-affiliate-cta-btn"
+              href={AFFILIATE_BUY_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 group"
+            >
+              <span>
+                {language === 'en'
+                  ? 'Try VapoFil™ 100% Risk-Free For 60 Days'
+                  : 'Experimentar VapoFil™ Sem Risco por 60 Dias'}
+              </span>
+              <ArrowRight className="w-5 h-5 text-slate-950 group-hover:translate-x-1 transition-transform" />
+            </a>
           </div>
 
         </div>

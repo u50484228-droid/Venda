@@ -1,9 +1,11 @@
 import { Ingredient, PricingTier, Testimonial, FaqItem, AdSwipe, FunnelSettings } from '../types';
 
+export const AFFILIATE_BUY_LINK = 'https://vapofil.com/vpf-aff-buy-dtc/?aff_id=78146';
+
 export const DEFAULT_FUNNEL_SETTINGS: FunnelSettings = {
-  checkoutUrl1Bottle: '',
-  checkoutUrl3Bottles: '',
-  checkoutUrl6Bottles: '',
+  checkoutUrl1Bottle: AFFILIATE_BUY_LINK,
+  checkoutUrl3Bottles: AFFILIATE_BUY_LINK,
+  checkoutUrl6Bottles: AFFILIATE_BUY_LINK,
   urgencyMinutes: 27,
   enableExitIntent: true,
   activeHeadlineVariant: 'hormone-trap',

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Award, CheckCircle2, Quote, ShieldCheck, Stethoscope } from 'lucide-react';
+import { Award, CheckCircle2, Quote, ShieldCheck, Stethoscope, ArrowRight } from 'lucide-react';
 import { BottleVisual } from './BottleVisual';
+import { AFFILIATE_BUY_LINK } from '../data/productData';
 import { Language } from '../types';
 
 interface DoctorEndorsementProps {
@@ -94,6 +95,24 @@ export const DoctorEndorsement: React.FC<DoctorEndorsementProps> = ({ language, 
                     <span>Peer-Reviewed Botanical Dossier</span>
                   </div>
                 </div>
+              </div>
+
+              {/* Doctor Endorsement CTA Button */}
+              <div className="pt-4">
+                <a
+                  id="doctor-affiliate-cta-btn"
+                  href={AFFILIATE_BUY_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-sm sm:text-base uppercase tracking-wider shadow-lg shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 group"
+                >
+                  <span>
+                    {language === 'en'
+                      ? 'Claim Doctor-Reviewed Discount Up To $780 Off'
+                      : 'Garantir Desconto Especial Avaliado Por Médicos'}
+                  </span>
+                  <ArrowRight className="w-4 h-4 text-slate-950 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
 
             </div>

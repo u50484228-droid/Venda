@@ -1,6 +1,7 @@
 import React from 'react';
 import { ShieldCheck, CheckCircle, ArrowRight, Award, HeartPulse, Sparkles } from 'lucide-react';
 import { BottleVisual } from './BottleVisual';
+import { AFFILIATE_BUY_LINK } from '../data/productData';
 import { Language } from '../types';
 
 interface HeroProps {
@@ -121,14 +122,16 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
 
             {/* Primary Action Button Area */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <button
-                type="button"
-                onClick={scrollToPricing}
+              <a
+                id="hero-affiliate-cta-btn"
+                href={AFFILIATE_BUY_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3 cursor-pointer group"
               >
                 <span>{language === 'en' ? 'Claim Your Discount Up To $780 Off' : 'Garantir Meu Desconto Exclusivo'}</span>
                 <ArrowRight className="w-5 h-5 text-slate-950 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </a>
             </div>
 
             {/* 60-Day Guarantee Micro Seal */}

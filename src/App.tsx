@@ -11,19 +11,14 @@ import { Footer } from './components/Footer';
 import { LabelModal } from './components/LabelModal';
 import { StickyCtaBar } from './components/StickyCtaBar';
 import { SalesAnalystModal } from './components/SalesAnalystModal';
-import { CheckoutModal } from './components/CheckoutModal';
-import { Language, FunnelSettings, PricingTier } from './types';
-import { DEFAULT_FUNNEL_SETTINGS, PRICING_TIERS } from './data/productData';
+import { Language, FunnelSettings } from './types';
+import { DEFAULT_FUNNEL_SETTINGS } from './data/productData';
 
 export default function App() {
   // Funnel & UX State
   const [language, setLanguage] = useState<Language>('en');
   const [isLabelModalOpen, setIsLabelModalOpen] = useState(false);
   const [isAnalystModalOpen, setIsAnalystModalOpen] = useState(false);
-
-  // Checkout modal
-  const [selectedTier, setSelectedTier] = useState<PricingTier | null>(null);
-  const [isCheckoutModalOpen, setIsCheckoutModalOpen] = useState(false);
 
   // Funnel Settings (Loaded from localStorage if previously configured)
   const [funnelSettings, setFunnelSettings] = useState<FunnelSettings>(() => {
@@ -59,11 +54,6 @@ export default function App() {
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
-  const handleSelectTier = (tier: PricingTier) => {
-    setSelectedTier(tier);
-    setIsCheckoutModalOpen(true);
-  };
-
   return (
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-amber-400 selection:text-slate-950 antialiased">
       <main>
@@ -90,14 +80,13 @@ export default function App() {
           onOpenLabelModal={() => setIsLabelModalOpen(true)}
         />
 
-        {/* 6. Pricing & Order Tiers (Matching Images 3, 4, 8) */}
+        {/* 6. Pricing & Order CTA (Direct Affiliate Link) */}
         <PricingSection
           language={language}
           onOpenLabelModal={() => setIsLabelModalOpen(true)}
           minutes={minutes}
           seconds={seconds}
           funnelSettings={funnelSettings}
-          onSelectTier={handleSelectTier}
         />
 
         {/* 7. 60-Day Ironclad Guarantee & Official Badges (Matching Images 4 & 5) */}
@@ -137,14 +126,6 @@ export default function App() {
         language={language}
         funnelSettings={funnelSettings}
         onUpdateSettings={handleUpdateSettings}
-      />
-
-      <CheckoutModal
-        isOpen={isCheckoutModalOpen}
-        onClose={() => setIsCheckoutModalOpen(false)}
-        selectedTier={selectedTier}
-        language={language}
-        onOpenAnalyst={() => setIsAnalystModalOpen(true)}
       />
 
     </div>
