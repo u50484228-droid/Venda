@@ -16,31 +16,33 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-bold uppercase tracking-wider">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
-            <span>{language === 'en' ? 'Real American Men. Real Verified Results.' : 'Homens Reais. Resultados Comprovados.'}</span>
+            <span>{language === 'en' ? 'Verified Customer Experiences' : 'Experiências de Clientes Verificados'}</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight">
             {language === 'en' ? (
               <>
-                Over 14,200 Men Have Regained Their{' '}
-                <span className="text-amber-600">Primal Masculine Drive</span>
+                What Men Are Saying About Their{' '}
+                <span className="text-amber-600">Daily Energy & Vitality</span>
               </>
             ) : (
               <>
-                Mais de 14.200 Homens Recuperaram Sua{' '}
-                <span className="text-amber-600">Virilidade e Confiança</span>
+                O Que Nossos Clientes Dizem Sobre Sua{' '}
+                <span className="text-amber-600">Energia e Vitalidade Diária</span>
               </>
             )}
           </h2>
 
-          <div className="flex items-center justify-center gap-2 pt-2">
-            <div className="flex text-amber-400">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
-              ))}
-            </div>
-            <span className="text-sm font-bold text-slate-900">4.92 / 5.0 Global Rating</span>
-            <span className="text-xs text-slate-500">• 100% Authentic Customer Feedback</span>
+          <p className="text-sm text-slate-600 max-w-xl mx-auto">
+            {language === 'en'
+              ? 'Reviewed by authentic customers across the United States incorporating VapoFil into their daily wellness routines.'
+              : 'Avaliado por clientes reais nos Estados Unidos que integraram o VapoFil à sua rotina diária de bem-estar.'}
+          </p>
+
+          <div className="pt-2">
+            <span className="inline-block px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-xs text-slate-600 font-medium">
+              ★ {language === 'en' ? 'Authentic Customer Feedback • Verified Purchasers' : 'Relatos Reais de Consumidores • Compradores Verificados'}
+            </span>
           </div>
         </div>
 
@@ -94,6 +96,15 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({ langua
 
             </div>
           ))}
+        </div>
+
+        {/* FTC Testimonial Compliance Notice */}
+        <div className="mt-10 p-4 rounded-xl bg-slate-50 border border-slate-200 text-center max-w-2xl mx-auto">
+          <p className="text-[11px] text-slate-500 leading-relaxed">
+            {language === 'en'
+              ? 'FTC Compliance Disclosure: Customer reviews represent individual experiences with dietary supplementation. Individual results vary based on metabolism, consistency, and lifestyle. VapoFil™ does not claim to diagnose, treat, cure, or prevent any medical condition.'
+              : 'Aviso de Conformidade Legal: Os relatos representam experiências individuais de clientes com suplementação dietética. Os resultados variam de acordo com o metabolismo e a constância de uso. O VapoFil™ não se destina a diagnosticar, tratar, curar ou prevenir qualquer condição médica.'}
+          </p>
         </div>
 
       </div>

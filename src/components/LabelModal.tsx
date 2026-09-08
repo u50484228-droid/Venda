@@ -193,8 +193,8 @@ export const LabelModal: React.FC<LabelModalProps> = ({ isOpen, onClose, languag
             </div>
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
               <CheckCircle2 className="w-5 h-5 text-blue-600 mx-auto mb-1" />
-              <p className="text-xs font-bold text-slate-900">Doctor Formulated</p>
-              <p className="text-[10px] text-slate-500">Clinical botanical ratios</p>
+              <p className="text-xs font-bold text-slate-900">Scientifically Formulated</p>
+              <p className="text-[10px] text-slate-500">Research-backed botanical ratios</p>
             </div>
             <div className="p-3 bg-slate-50 rounded-xl border border-slate-200 text-center">
               <CheckCircle2 className="w-5 h-5 text-emerald-600 mx-auto mb-1" />

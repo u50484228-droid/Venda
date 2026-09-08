@@ -39,6 +39,7 @@ export interface PricingTier {
 export interface Testimonial {
   id: string;
   name: string;
+  namePt?: string;
   location: string;
   age: number;
   rating: number;

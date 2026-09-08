@@ -46,11 +46,11 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
             <p>
               {language === 'en' ? (
                 <>
-                  Our dietary supplements are backed by an ironclad <strong className="text-slate-900 font-bold">60-day 100% money-back guarantee</strong> from your purchase date. If you aren't completely thrilled with your physical energy, morning vigor, and overall bedroom vitality, simply return the bottles for a prompt, full 100% refund.
+                  Our dietary supplements are backed by an ironclad <strong className="text-slate-900 font-bold">60-day 100% money-back guarantee</strong> from your purchase date. If you aren't completely satisfied with your physical stamina, daily energy, and overall vitality, simply return the bottles for a prompt, full 100% refund (less shipping and handling).
                 </>
               ) : (
                 <>
-                  Nossos suplementos têm garantia incondicional de reembolso de 60 dias a partir da data da compra. Se você não estiver completamente satisfeito com os resultados, basta solicitar o reembolso integral de 100% do seu investimento.
+                  Nossos suplementos têm garantia incondicional de reembolso de 60 dias a partir da data da compra. Se você não estiver completamente satisfeito com seus níveis de disposição e vitalidade, basta solicitar o reembolso integral de 100% do seu investimento.
                 </>
               )}
             </p>
@@ -58,7 +58,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
             <p className="text-xs sm:text-sm text-slate-500 italic">
               {language === 'en' ? (
                 <>
-                  "Even if you return empty bottles, we will issue a full, prompt refund. That is our unwavering confidence in VapoFil’s formulation. Order your kit today completely risk-free!"
+                  "Even if you return empty bottles, we will issue a full, prompt refund. That is our unwavering confidence in VapoFil’s formulation. Order your supply today completely risk-free!"
                 </>
               ) : (
                 <>

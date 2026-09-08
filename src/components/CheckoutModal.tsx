@@ -166,10 +166,10 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({
               <div className="text-xs space-y-1">
                 <div className="flex items-center gap-1.5 font-black text-amber-900 text-sm">
                   <Sparkles className="w-4 h-4 text-amber-600 fill-amber-500" />
-                  <span>ONE-TIME OFFER: Add VapoFil 15-Minute Nitric Booster Drops (+ $19.95)</span>
+                  <span>ONE-TIME OPTIONAL ADD-ON: VapoFil Botanical Vitality Drops (+ $19.95)</span>
                 </div>
                 <p className="text-slate-700 leading-snug">
-                  Accelerate pelvic absorption before intimate moments with our sublingual liquid drops. 60% OFF regular $49.95 retail price.
+                  Provides liquid botanical support formulated to nourish daily microvascular circulation and physical endurance.
                 </p>
               </div>
             </div>

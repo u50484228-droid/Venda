@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Timer, Flame } from 'lucide-react';
+import { ShoppingCart, Timer, Flame, ShieldCheck } from 'lucide-react';
 import { AFFILIATE_BUY_LINK } from '../data/productData';
 import { Language } from '../types';
 
@@ -60,11 +60,11 @@ export const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ language, minutes, s
           </div>
         </div>
 
-        {/* Right CTA + Timer */}
+        {/* Right CTA + Guarantee Badge */}
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-900 font-mono font-bold text-xs sm:text-sm">
-            <Timer className="w-3.5 h-3.5 text-amber-600" />
-            <span>{formattedTime}</span>
+          <div className="hidden md:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-800 font-bold text-xs">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
+            <span>{language === 'en' ? '60-Day Guarantee' : 'Garantia de 60 Dias'}</span>
           </div>
 
           <a

@@ -33,14 +33,14 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Flash Sale Urgency Badge */}
+        {/* Production Batch Pricing Badge */}
         <div className="flex items-center justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs sm:text-sm font-bold shadow-xs">
-            <Sparkles className="w-4 h-4 text-amber-600 animate-pulse" />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 text-blue-900 text-xs sm:text-sm font-bold shadow-xs">
+            <Sparkles className="w-4 h-4 text-blue-600" />
             <span>
               {language === 'en'
-                ? `Special Promotional Pricing Reserved For: ${formattedTime}`
-                : `Preço Promocional Especial Reservado Por: ${formattedTime}`}
+                ? 'Current Production Run • Direct Manufacturer Pricing Active'
+                : 'Lote de Produção Atual • Desconto Direto de Fábrica Ativo'}
             </span>
           </div>
         </div>
@@ -50,20 +50,20 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
           <h2 className="text-2xl sm:text-4xl md:text-5xl font-black tracking-tight text-slate-950 uppercase">
             {language === 'en' ? (
               <>
-                CLAIM YOUR DISCOUNT UP TO{' '}
+                CLAIM YOUR DIRECT DISCOUNT UP TO{' '}
                 <span className="text-blue-700">$780 OFF</span> TODAY
               </>
             ) : (
               <>
-                GARANTA SEU DESCONTO DE ATÉ{' '}
+                GARANTA SEU DESCONTO DIRETO DE ATÉ{' '}
                 <span className="text-blue-700">$780 OFF</span> HOJE
               </>
             )}
           </h2>
           <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-medium">
             {language === 'en'
-              ? 'Click below to visit the official secure store, select your package (2, 3, or 6 bottles), and experience renewed male virility and morning vitality 100% risk-free.'
-              : 'Clique no botão abaixo para acessar a página oficial segura, escolher seu kit com desconto exclusivo e experimentar o ápice da sua virilidade masculina com garantia de 60 dias.'}
+              ? 'Select your preferred package (2, 3, or 6 bottles) below to order directly through the official secure checkout and experience comprehensive vitality support with a full 60-day guarantee.'
+              : 'Selecione seu pacote ideal (2, 3 ou 6 frascos) abaixo para fazer seu pedido pela página oficial segura e receber suporte nutricional à sua vitalidade com garantia completa de 60 dias.'}
           </p>
         </div>
 
