@@ -1,5 +1,6 @@
 import React from 'react';
 import { Ingredient, PricingTier, Testimonial, FaqItem, AdSwipe, FunnelSettings } from '../types';
+import { recordCustomerActivity, recordAffiliateClick } from '../services/firebase';
 
 export const AFFILIATE_BUY_LINK = 'https://vapofil.com/vpf-aff-buy-dtc/?aff_id=78146';
 
@@ -11,11 +12,20 @@ declare global {
 
 export const triggerConversionAndRedirect = (
   e?: React.MouseEvent<HTMLAnchorElement>,
-  url: string = AFFILIATE_BUY_LINK
+  url: string = AFFILIATE_BUY_LINK,
+  label: string = 'Clique Botão de Compra Oficial'
 ) => {
   if (e) {
     e.preventDefault();
   }
+
+  // Record specific affiliate click and atomic counters into Firebase
+  try {
+    recordAffiliateClick(label, url);
+  } catch (err) {
+    console.warn('Affiliate log notice:', err);
+  }
+
   if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
     window.gtag_report_conversion(url);
   } else if (typeof window !== 'undefined') {

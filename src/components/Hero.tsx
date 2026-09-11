@@ -8,16 +8,21 @@ interface HeroProps {
   language: Language;
   onOpenLabelModal: () => void;
   headlineVariant?: string;
+  minutes?: number;
+  seconds?: number;
 }
 
-export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
+export const Hero: React.FC<HeroProps> = ({
+  language,
+  onOpenLabelModal,
+}) => {
   const scrollToPricing = () => {
     const el = document.getElementById('pricing-section');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50/25 text-slate-900 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
+    <section id="hero-section" className="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-blue-50/25 text-slate-900 pt-8 pb-16 lg:pt-14 lg:pb-24 border-b border-slate-200">
       
       {/* Ambient background glow effects */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-blue-500/5 blur-[140px] rounded-full pointer-events-none -z-10" />
@@ -127,7 +132,7 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
                 href={AFFILIATE_BUY_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK)}
+                onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK, 'Hero CTA - Claim Your Discount $780 Off')}
                 className="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 flex items-center justify-center gap-3 cursor-pointer group"
               >
                 <span>{language === 'en' ? 'Claim Your Discount Up To $780 Off' : 'Garantir Meu Desconto Exclusivo'}</span>
@@ -178,10 +183,12 @@ export const Hero: React.FC<HeroProps> = ({ language, onOpenLabelModal }) => {
 
           {/* Right Column: High-Impact Bottle Display (1st on mobile, 5 cols on desktop) */}
           <div className="order-1 lg:order-2 lg:col-span-5 flex flex-col items-center justify-center">
-            <div className="relative w-full max-w-md p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-blue-50/60 via-slate-50 to-white border border-blue-100 shadow-xl">
-              
+            <div
+              title="VapoFil™ 6-Bottle Presentation"
+              className="relative w-full max-w-md p-4 sm:p-6 rounded-3xl bg-gradient-to-b from-blue-50/60 via-slate-50 to-white border border-blue-100 shadow-xl select-none"
+            >
               {/* Product Badge Tag */}
-              <div className="absolute top-4 right-4 z-20">
+              <div className="absolute top-4 right-4 z-20 pointer-events-none">
                 <div className="px-3 py-1 rounded-full bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow-md flex items-center gap-1">
                   <Sparkles className="w-3.5 h-3.5 fill-slate-950" />
                   <span>{language === 'en' ? '100% Natural' : '100% Natural'}</span>

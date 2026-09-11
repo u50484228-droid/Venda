@@ -178,7 +178,13 @@ export const PricingSection: React.FC<PricingSectionProps> = ({
                     href={affiliateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={(e) => triggerConversionAndRedirect(e, affiliateUrl)}
+                    onClick={(e) =>
+                      triggerConversionAndRedirect(
+                        e,
+                        affiliateUrl,
+                        'Pricing Section - Claim Your Discount & Order Now (Save Up To $780)'
+                      )
+                    }
                     className="w-full py-5 px-6 rounded-2xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-lg sm:text-xl uppercase tracking-wider shadow-xl shadow-amber-500/25 border-2 border-amber-300 transition-all hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 text-center cursor-pointer group"
                   >
                     <span>

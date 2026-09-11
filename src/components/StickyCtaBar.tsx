@@ -72,7 +72,7 @@ export const StickyCtaBar: React.FC<StickyCtaBarProps> = ({ language, minutes, s
             href={AFFILIATE_BUY_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK)}
+            onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK, 'Sticky Bottom CTA Bar - Claim Deal')}
             className="px-4 sm:px-6 py-2.5 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-xs sm:text-sm uppercase tracking-wider shadow-lg shadow-amber-500/20 flex items-center gap-2 transition-transform hover:scale-105 active:scale-95 cursor-pointer"
           >
             <ShoppingCart className="w-4 h-4" />

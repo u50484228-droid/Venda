@@ -11,10 +11,14 @@ import { Footer } from './components/Footer';
 import { LabelModal } from './components/LabelModal';
 import { StickyCtaBar } from './components/StickyCtaBar';
 import { SalesAnalystModal } from './components/SalesAnalystModal';
+import { useCustomerTracker } from './hooks/useCustomerTracker';
 import { Language, FunnelSettings } from './types';
 import { DEFAULT_FUNNEL_SETTINGS } from './data/productData';
 
 export default function App() {
+  // Automated background behavioral telemetry into Firebase
+  useCustomerTracker();
+
   // Funnel & UX State
   const [language, setLanguage] = useState<Language>('en');
   const [isLabelModalOpen, setIsLabelModalOpen] = useState(false);
@@ -127,7 +131,6 @@ export default function App() {
         funnelSettings={funnelSettings}
         onUpdateSettings={handleUpdateSettings}
       />
-
     </div>
   );
 }

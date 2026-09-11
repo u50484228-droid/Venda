@@ -9,7 +9,7 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ language }) => {
   return (
-    <footer className="bg-slate-100 text-slate-600 text-xs border-t border-slate-200 py-10 pb-24 sm:pb-12">
+    <footer id="footer-section" className="bg-slate-100 text-slate-600 text-xs border-t border-slate-200 py-10 pb-24 sm:pb-12">
       <div className="max-w-4xl mx-auto px-4 text-center space-y-6">
         
         {/* Brand */}

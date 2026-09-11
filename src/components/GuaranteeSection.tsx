@@ -9,7 +9,7 @@ interface GuaranteeSectionProps {
 
 export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) => {
   return (
-    <section className="py-16 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200 relative">
+    <section id="guarantee-section" className="py-16 sm:py-24 bg-slate-50 text-slate-900 border-b border-slate-200 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Navy Highlighted Guarantee Container */}
@@ -110,7 +110,7 @@ export const GuaranteeSection: React.FC<GuaranteeSectionProps> = ({ language }) 
               href={AFFILIATE_BUY_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK)}
+              onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK, 'Guarantee Section - Try 100% Risk-Free For 60 Days')}
               className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-base sm:text-lg uppercase tracking-wider shadow-xl shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 group"
             >
               <span>
