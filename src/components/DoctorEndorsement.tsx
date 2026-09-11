@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, CheckCircle2, ShieldCheck, Microscope, ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
-import { AFFILIATE_BUY_LINK } from '../data/productData';
+import { AFFILIATE_BUY_LINK, triggerConversionAndRedirect } from '../data/productData';
 import { Language } from '../types';
 
 interface DoctorEndorsementProps {
@@ -138,6 +138,7 @@ export const DoctorEndorsement: React.FC<DoctorEndorsementProps> = ({ language, 
                   href={AFFILIATE_BUY_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => triggerConversionAndRedirect(e, AFFILIATE_BUY_LINK)}
                   className="inline-flex items-center justify-center gap-2.5 w-full sm:w-auto px-6 py-3.5 rounded-xl bg-gradient-to-b from-[#fecb00] via-[#f7b700] to-[#e7a300] hover:from-[#fed42a] hover:to-[#efa800] text-slate-950 font-black text-sm sm:text-base uppercase tracking-wider shadow-lg shadow-amber-500/20 border-2 border-amber-300 transition-all hover:scale-105 active:scale-95 group text-center"
                 >
                   <span>

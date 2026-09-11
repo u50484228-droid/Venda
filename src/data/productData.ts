@@ -1,6 +1,27 @@
+import React from 'react';
 import { Ingredient, PricingTier, Testimonial, FaqItem, AdSwipe, FunnelSettings } from '../types';
 
 export const AFFILIATE_BUY_LINK = 'https://vapofil.com/vpf-aff-buy-dtc/?aff_id=78146';
+
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
+export const triggerConversionAndRedirect = (
+  e?: React.MouseEvent<HTMLAnchorElement>,
+  url: string = AFFILIATE_BUY_LINK
+) => {
+  if (e) {
+    e.preventDefault();
+  }
+  if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+    window.gtag_report_conversion(url);
+  } else if (typeof window !== 'undefined') {
+    window.location.href = url;
+  }
+};
 
 export const DEFAULT_FUNNEL_SETTINGS: FunnelSettings = {
   checkoutUrl1Bottle: AFFILIATE_BUY_LINK,
